@@ -1,0 +1,30 @@
+lass Solution {
+public:
+    bool backspaceCompare(string s, string t) {
+        string a = "";
+        string b = "";
+
+    for(int i = 0 ; i< s.size(); i++){
+        if(s[i]=='#'){
+            if(!a.empty()){
+                a.pop_back();
+            }
+        }
+        else{
+            a.push_back(s[i]);
+        }
+    }
+    for(int j = 0 ; j < t.size(); j++){
+        if(t[j]=='#'){
+            if(!b.empty()){
+                b.pop_back();
+            }
+        }
+        else{
+            b.push_back(t[j]);
+        }
+    } 
+    return a==b;   
+        
+    }
+};
